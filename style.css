@@ -13,7 +13,7 @@ p * {
 	display: block;
 }
 
-input.mail {
+input {
 	appearance: none;
 	width: 100%;
 	border: 1px solid #333;
@@ -53,4 +53,15 @@ input:focus.invalid {
 
 .good {
     background-color: greenyellow;
+}
+
+.icon {  
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: -1.8rem;
+}
+
+.icon:hover {
+    cursor: pointer;
+    color:darkred;
 }

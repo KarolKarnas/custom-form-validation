@@ -4,14 +4,19 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
 		<title>Document</title>
 	</head>
 	<body>
 		<form>
 			<p>
 				<label for="mail">
-					<span>Email:</span>
+					<span>(*) Email:</span>
 					<input type="text" id="mail" name="mail" />
 					<span class="error" aria-live="polite"></span>
 				</label>
@@ -26,13 +31,36 @@
 			<p>
 				<label for="zipcode">
 					<span>ZIP code:</span>
-					<input type="text" id="zipcode" name="zipcode" disabled/>
+					<input type="text" id="zipcode" name="zipcode" disabled />
 					<span class="error" aria-live="polite"></span>
 				</label>
 			</p>
-			<button>Submit</button>
+			<p>
+				<span id="icon-password" class="icon material-symbols-outlined">
+					visibility_off
+				</span>
+				<label for="password">
+					<span>(*) Password:</span>
+					<input type="text" id="password" name="password" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<p>
+				<span id="icon-confirm" class="icon material-symbols-outlined">
+					visibility_off
+				</span>
+				<label for="confirm">
+					<span>(*) Confirm Password:</span>
+					<input type="text" id="confirm" name="confirm" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<button type="submit">Submit</button>
 		</form>
-        <script src="app.js" type="module"></script>
-        <!-- <script src="postal-codes.js" type="module"></script> -->
+		<p id="thank-you" style="display: none">
+			Thank you so much for sending your private data! Cheers
+		</p>
+		<script src="app.js" type="module"></script>
+		<!-- <script src="postal-codes.js" type="module"></script> -->
 	</body>
 </html>
