@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+		<title>Document</title>
+	</head>
+	<body>
+		<form>
+			<p>
+				<label for="mail">
+					<span>Email:</span>
+					<input type="text" id="mail" name="mail" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<p>
+				<label for="country">
+					<span>Country:</span>
+					<input type="text" id="country" name="country" />
+					<span class="error" aria-live="polite"></span>
+				</label>
+			</p>
+			<button>Submit</button>
+		</form>
+        <script src="app.js" type="module"></script>
+        <!-- <script src="postal-codes.js" type="module"></script> -->
+	</body>
+</html>
