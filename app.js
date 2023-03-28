@@ -24,20 +24,13 @@ const iconConfirm = document.getElementById('icon-confirm')
 const thankYou = document.getElementById('thank-you');
 let displayFlag = false
 
-
-// As per the HTML Specification
 const emailRegExp =
 	/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const passwordRegExp =
 	/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-// Now we can rebuild our validation constraint
-// Because we do not rely on CSS pseudo-class, we have to
-// explicitly set the valid/invalid class on our email field
 window.addEventListener('load', () => {
-	// Here, we test if the field is empty (remember, the field is not required)
-	// If it is not, we check if its content is a well-formed email address.
 	const isEmailValid =
 		email.value.length === 0 || emailRegExp.test(email.value);
 	email.className = isEmailValid ? 'valid' : 'invalid';
@@ -45,7 +38,6 @@ window.addEventListener('load', () => {
 	country.className = isCountryValid ? 'valid' : 'invalid';
 });
 
-// This defines what happens when the user types in the field
 email.addEventListener('input', () => {
 	if (email.value.length === 0) {
 		email.className = 'invalid';
@@ -163,7 +155,7 @@ iconConfirm.addEventListener('click', () => {
     }
 })
 
-// ------------------ SUBMIT ----------------------
+// ------------ SUBMIT ---------------
 form.addEventListener('submit', (event) => {
 	//MAIL
 	if (email.value.length === 0) {
@@ -210,7 +202,7 @@ form.addEventListener('submit', (event) => {
 		}
 	});
 
-	//ZiPP
+	//ZIP
 	if (zip.disabled === true) {
 	} else if (!zip.disabled && zip.value.length === 0) {
 		zip.className = 'invalid';
